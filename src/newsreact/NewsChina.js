@@ -1,0 +1,38 @@
+import React, { Component } from 'react';
+import NewsItem from "./NewsItem"
+
+
+class NewsChina extends Component {
+    state = { newsChina: [] }
+
+    componentDidMount = () => {
+        fetch('https://newsapi.org/v2/top-headlines?country=cn&pageSize=100&apiKey=6a5b19f7e370417e8c5973890cab1909')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                this.setState({ newsChina: data.articles })
+            });
+    }
+    render() {
+        return (
+            <div className="NeuerGrid">
+                {this.state.newsChina.map((news, i) => {
+                    return (
+                        <NewsItem
+                            urlToImage={news.urlToImage}
+                            title={news.title}
+                            description={news.description}
+                            author={news.author}
+                            publishedAt={news.publishedAt}
+                            url={news.url}
+                            key={i}
+                        />
+                    )
+                }
+                )}
+            </div>);
+    }
+}
+
+export default NewsChina;

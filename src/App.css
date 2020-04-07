@@ -1,7 +1,59 @@
 .App {
+  /* text-align: center; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+
+.header-me {
+  height: 10vh;
+  background: lightblue;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main {
+  height: 90vh;
+  width: 100%;
+}
+
+.NeuerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#startimage {
+  height: 90vh;
+  width: 100%;
+  object-fit: contain/cover;
+}
+
+.imgNews {
+  width: 100%;
+}
+
+/* --------------------------- NEUU --------------------------- */
+
+figure {
+  border: 1px solid black;
+  padding: 20px;
+  background: lightblue;
+  margin: 30px 30px;
+}
+
+h3 {
   text-align: center;
 }
 
+/* --------------------------- NEUU --------------------------- */
+
+
+
+
+
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +87,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
